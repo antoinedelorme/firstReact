@@ -8,19 +8,19 @@ const events = [
   {
     id: 2,
     title1: "Intelligence artificielle",
-    title2: "musée d'Orsay",
+    title2: "mythes et réalités",
     src: "/images/img2.png"
   },
   {
     id: 3,
     title1: "San Francisco",
-    title2: "musée d'Orsay",
+    title2: "lieux insolites",
     src: "/images/img3.png"
   },
   {
     id: 4,
     title1: "Hokusai",
-    title2: "musée d'Orsay",
+    title2: "musée Guimet",
     src: "/images/img4.png"
   }
 ];
