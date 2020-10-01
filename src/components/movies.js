@@ -16,13 +16,13 @@ export default () => {
   return (
     <form className="form" onSubmit={searchMovies}>
       <label className="label" htmlFor="query">
-        Movie Name
+        label
       </label>
       <input
         className="input"
         type="text"
         name="query"
-        placeholder="i.e. test Park"
+        placeholder="ex: histoire de l'art"
         value={query}
         onChange={(e) => {
           setQuery(e.target.value);
@@ -30,7 +30,7 @@ export default () => {
         }}
       />
       <button className="button" type="submit">
-        Search
+        Recherche
       </button>
     </form>
   );
