@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import events from "./assets/fake_DB";
 
 import SearchMovies from "./components/movies";
 import ImageComponent from "./components/image";
-import EventComponent from "./components/event";
+
+import EventsContainer from "./components/eventsContainer";
+
 import { Button, ButtonGroup } from "@material-ui/core";
 
 export default function App() {
+  const [filter, setFilter] = useState("");
   return (
     <div className="App">
       <SearchMovies />
@@ -23,19 +26,23 @@ export default function App() {
           color="primary"
           aria-label="large outlined primary button group"
         >
-          <Button style={{ fontSize: "0.5em" }}>Histoire</Button>
+          <Button
+            onClick={(localEvent) => {
+              localEvent.preventDefault();
+              setFilter("histoire");
+            }}
+            style={{ fontSize: "0.5em" }}
+          >
+            Histoire
+          </Button>
           <Button style={{ fontSize: "0.5em" }}>Musique</Button>
           <Button style={{ fontSize: "0.5em" }}>Art</Button>
           <Button style={{ fontSize: "0.5em" }}>Sciences</Button>
           <Button style={{ fontSize: "0.5em" }}>Voyages</Button>
         </ButtonGroup>
       </div>
+      <EventsContainer events={events} filter={filter} />
 
-      <div className="eventsContainer">
-        {events.map((event) => (
-          <EventComponent key={event.id} event={event} />
-        ))}
-      </div>
       <h1>OK </h1>
     </div>
   );
