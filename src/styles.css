@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  font-family: "Roboto";
 }
 
 * {
@@ -91,24 +92,24 @@ small {
 .imageContainerTitle1 {
   position: absolute;
   color: rgb(236, 245, 198);
-  font-size: 2.2em;
+  font-size: 2.6em;
   font-weight: bold;
-  bottom: 16%;
+  bottom: 18%;
   left: 5%;
 }
 
 .imageContainerTitle2 {
   position: absolute;
   color: rgb(236, 245, 198);
-  font-size: 1.7em;
-  bottom: 8%;
-  left: 5%;
+  font-size: 2em;
+  bottom: 10%;
+  left: 7%;
 }
 
 .imageContainerBottom {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(#0000005b, #000000);
   height: 30%;
   width: 100%;
-  bottom: 1.25%;
+  bottom: 4%;
 }
