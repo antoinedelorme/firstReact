@@ -25,6 +25,11 @@ export default ({ event }) => {
   monthName[10] = "NOV";
   monthName[11] = "DEC";
 
+  const formatted_string = (pad, user_str, pad_pos) => {
+    if (typeof user_str === "undefined") return pad;
+    return (pad + user_str).slice(-pad.length);
+  };
+
   const n = weekday[date.getDay()];
 
   return (
@@ -33,6 +38,12 @@ export default ({ event }) => {
       <div className="imageContainerBottom"></div>
       <div className="imageContainerTitle1">{event.title1}</div>
       <div className="imageContainerTitle2">{event.title2}</div>
+      <div className="imageTime">
+        <div>
+          {formatted_string("00", date.getHours())}:
+          {formatted_string("00", date.getMinutes())}
+        </div>
+      </div>
       <div className="imageDateContainer">
         <div className="imageMonthFormat">{n}</div>
         <div className="imageDateFormat">{date.getDay()}</div>
