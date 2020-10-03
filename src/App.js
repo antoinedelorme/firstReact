@@ -16,6 +16,11 @@ export default function App() {
   let [filter, setFilter] = useState("");
   useEffect(() => {});
   const classes = useStyles();
+  const buttonStyle = {
+    fontSize: "0.5em",
+    color: "#ffffff",
+    backgroundColor: "#40407a"
+  };
   return (
     <div className="App">
       <SearchMovies />
@@ -52,64 +57,22 @@ export default function App() {
           color="primary"
           aria-label="large outlined primary button group"
         >
-          <Button
-            onClick={() => setFilter("")}
-            style={{
-              fontSize: "0.5em",
-              color: "#FFFFFF",
-              backgroundColor: "#000000"
-            }}
-          >
+          <Button onClick={() => setFilter("")} style={buttonStyle}>
             Tout
           </Button>
-          <Button
-            onClick={() => setFilter("histoire")}
-            style={{
-              fontSize: "0.5em",
-              color: "#000",
-              backgroundColor: "#2ed573"
-            }}
-          >
+          <Button onClick={() => setFilter("histoire")} style={buttonStyle}>
             Histoire
           </Button>
-          <Button
-            onClick={() => setFilter("musique")}
-            style={{
-              fontSize: "0.5em",
-              color: "#fff",
-              backgroundColor: "#eccc68"
-            }}
-          >
+          <Button onClick={() => setFilter("musique")} style={buttonStyle}>
             Musique
           </Button>
-          <Button
-            onClick={() => setFilter("art")}
-            style={{
-              fontSize: "0.5em",
-              color: "#f1f2f6",
-              backgroundColor: "#6D214F"
-            }}
-          >
+          <Button onClick={() => setFilter("art")} style={buttonStyle}>
             Art
           </Button>
-          <Button
-            onClick={() => setFilter("sciences")}
-            style={{
-              fontSize: "0.5em",
-              color: "#ffffff",
-              backgroundColor: "#40407a"
-            }}
-          >
+          <Button onClick={() => setFilter("sciences")} style={buttonStyle}>
             Sciences
           </Button>
-          <Button
-            onClick={() => setFilter("voyages")}
-            style={{
-              fontSize: "0.5em",
-              color: "#ffffff",
-              backgroundColor: "#ff5252"
-            }}
-          >
+          <Button onClick={() => setFilter("voyages")} style={buttonStyle}>
             Voyages
           </Button>
         </ButtonGroup>
