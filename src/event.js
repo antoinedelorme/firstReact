@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-export default () => {
+export default (data) => {
   const mainContainerStyle = {
     display: "flex",
     justifyContent: "evenly-spaced"
@@ -27,7 +27,7 @@ export default () => {
   return (
     <div style={mainContainerStyle}>
       <div style={leftContainerStyle}>
-        <h1>LEFT</h1>
+        <h1>TEST</h1>
       </div>
       <div style={rightContainerStyle}>
         {" "}

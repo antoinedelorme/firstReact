@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import SearchMovies from "./components/movies";
-import events from "./assets/fake_DB";
+import React, { useState, useEffect, useContext } from "react";
 import ImageComponent from "./components/image";
 import EventsContainer from "./components/eventsContainer";
 import { Button, ButtonGroup } from "@material-ui/core";
+import { EventsContext } from "./context/eventsContext";
 import "./styles.css";
+
 const buttonStyle = {
   fontSize: "0.5em",
   color: "#ffffff",
@@ -12,6 +12,7 @@ const buttonStyle = {
 };
 
 const Main = () => {
+  const [events, setEvents] = useContext(EventsContext);
   const [filter, setFilter] = useState("");
   useEffect(() => {});
   return (
