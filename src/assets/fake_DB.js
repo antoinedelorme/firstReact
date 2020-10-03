@@ -1,12 +1,12 @@
-const date0 = new Date(2020, 10, 2, 15, 0);
-const date1 = new Date(2020, 10, 11, 11, 0);
-const date2 = new Date(2020, 10, 4, 9, 0);
-const date3 = new Date(2020, 11, 5, 15, 0);
-const date4 = new Date(2020, 10, 6, 14, 0);
-const date5 = new Date(2020, 10, 7, 17, 0);
-const date6 = new Date(2020, 10, 8, 15, 0);
-const date7 = new Date(2020, 10, 9, 15, 0);
-const date8 = new Date(2020, 10, 10, 20, 0);
+const date0 = new Date(2020, 9, 2, 15, 0);
+const date1 = new Date(2020, 9, 11, 11, 0);
+const date2 = new Date(2020, 9, 4, 9, 0);
+const date3 = new Date(2020, 10, 5, 15, 0);
+const date4 = new Date(2020, 9, 6, 14, 0);
+const date5 = new Date(2020, 9, 7, 17, 0);
+const date6 = new Date(2020, 9, 8, 15, 0);
+const date7 = new Date(2020, 9, 9, 15, 0);
+const date8 = new Date(2020, 9, 10, 20, 0);
 
 const events = [
   {
@@ -23,7 +23,7 @@ const events = [
     title2: "mythes et réalités",
     src: "/images/img2.png",
     date: date1,
-    type: "science"
+    type: "sciences"
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ const events = [
   },
   {
     id: 6,
-    title1: "Ragiroa",
+    title1: "Rangiroa",
     title2: "voyage au bout du monde",
     src: "/images/img6.png",
     date: date7,
@@ -78,13 +78,15 @@ const events = [
     title1: "Loisirs",
     title2: "un potager en ville",
     src: "/images/img9.png",
+    type: "loisirs",
     date: date8
   },
   {
     id: 10,
     title1: "Pierre Soulages",
-    title2: "musée pompidou",
+    title2: "musée Pompidou",
     src: "/images/img10.png",
+    type: "art",
     date: date8
   }
 ];

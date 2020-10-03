@@ -36,8 +36,8 @@ export default ({ event }) => {
     <div className="eventContainer">
       <img className="eventImage" src={event.src} alt="" />
       <div className="eventDate">
-        <div className="eventMonthFormat">{monthName[date.getMonth() - 1]}</div>
-        <div className="eventDateFormat">{date.getDay()}</div>
+        <div className="eventMonthFormat">{monthName[date.getMonth()]}</div>
+        <div className="eventDateFormat">{date.getDate()}</div>
       </div>
       <div className="eventName">
         <div>{event.title1}</div>

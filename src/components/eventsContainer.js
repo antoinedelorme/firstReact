@@ -7,10 +7,27 @@ export default ({ events, filter }) => {
   if (filter === "")
     return (
       <div className="eventsContainer">
-        {events.map((event) => (
-          <EventComponent key={event.id} event={event} />
-        ))}
+        {events
+          .slice()
+          .sort((a, b) => a.date - b.date)
+          .map((event) => (
+            <EventComponent key={event.id} event={event} />
+          ))}
       </div>
     );
-  else return <h1> tod</h1>;
+  else
+    return (
+      <div className="eventsContainer">
+        {events
+          .filter((event) => {
+            return event.type === filter;
+          })
+          .sort((a, b) => {
+            return a.date - b.date;
+          })
+          .map((event) => (
+            <EventComponent key={event.id} event={event} />
+          ))}
+      </div>
+    );
 };

@@ -46,8 +46,8 @@ export default ({ event }) => {
       </div>
       <div className="imageDateContainer">
         <div className="imageMonthFormat">{n}</div>
-        <div className="imageDateFormat">{date.getDay()}</div>
-        <div>{monthName[date.getMonth() - 1]}</div>
+        <div className="imageDateFormat">{date.getDate()}</div>
+        <div>{monthName[date.getMonth()]}</div>
       </div>
     </div>
   );
