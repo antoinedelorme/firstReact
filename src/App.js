@@ -13,12 +13,8 @@ import GridListTileBar from "@material-ui/core/GridListTileBar";
 import useStyles from "./styles";
 
 export default function App() {
-  const [state, setState] = useState({ filter: "", YPosition: 0 });
-  useEffect(() => {
-    // Met à jour le titre du document via l’API du navigateur
-    document.title = `${state.YPosition}`;
-    window.scrollTo(state.YPosition, 0);
-  });
+  let [filter, setFilter] = useState("");
+  useEffect(() => {});
   const classes = useStyles();
   return (
     <div className="App">
@@ -57,16 +53,7 @@ export default function App() {
           aria-label="large outlined primary button group"
         >
           <Button
-            onClick={(localEvent) => {
-              setState((prevState) => {
-                const newState = {
-                  ...prevState,
-                  filter: "",
-                  YPosition: window.scrollY
-                };
-                return newState; //instead of newState we return the changed prevState
-              });
-            }}
+            onClick={() => setFilter("")}
             style={{
               fontSize: "0.5em",
               color: "#FFFFFF",
@@ -76,16 +63,7 @@ export default function App() {
             Tout
           </Button>
           <Button
-            onClick={(localEvent) => {
-              setState((prevState) => {
-                const newState = {
-                  ...prevState,
-                  filter: "histoire",
-                  YPosition: window.scrollY
-                };
-                return newState; //instead of newState we return the changed prevState
-              });
-            }}
+            onClick={() => setFilter("histoire")}
             style={{
               fontSize: "0.5em",
               color: "#000",
@@ -95,16 +73,7 @@ export default function App() {
             Histoire
           </Button>
           <Button
-            onClick={(localEvent) => {
-              setState((prevState) => {
-                const newState = {
-                  ...prevState,
-                  filter: "musique",
-                  YPosition: window.scrollY
-                };
-                return newState; //instead of newState we return the changed prevState
-              });
-            }}
+            onClick={() => setFilter("musique")}
             style={{
               fontSize: "0.5em",
               color: "#fff",
@@ -114,16 +83,7 @@ export default function App() {
             Musique
           </Button>
           <Button
-            onClick={(localEvent) => {
-              setState((prevState) => {
-                const newState = {
-                  ...prevState,
-                  filter: "art",
-                  YPosition: window.scrollY
-                };
-                return newState; //instead of newState we return the changed prevState
-              });
-            }}
+            onClick={() => setFilter("art")}
             style={{
               fontSize: "0.5em",
               color: "#f1f2f6",
@@ -133,16 +93,7 @@ export default function App() {
             Art
           </Button>
           <Button
-            onClick={(localEvent) => {
-              setState((prevState) => {
-                const newState = {
-                  ...prevState,
-                  filter: "sciences",
-                  YPosition: window.scrollY
-                };
-                return newState; //instead of newState we return the changed prevState
-              });
-            }}
+            onClick={() => setFilter("sciences")}
             style={{
               fontSize: "0.5em",
               color: "#ffffff",
@@ -152,16 +103,7 @@ export default function App() {
             Sciences
           </Button>
           <Button
-            onClick={(localEvent) => {
-              setState((prevState) => {
-                const newState = {
-                  ...prevState,
-                  filter: "voyages",
-                  YPosition: window.scrollY
-                };
-                return newState; //instead of newState we return the changed prevState
-              });
-            }}
+            onClick={() => setFilter("voyages")}
             style={{
               fontSize: "0.5em",
               color: "#ffffff",
@@ -172,7 +114,7 @@ export default function App() {
           </Button>
         </ButtonGroup>
       </div>
-      <EventsContainer events={events} filter={state.filter} />
+      <EventsContainer events={events} filter={filter} />
     </div>
   );
 }
