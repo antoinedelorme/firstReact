@@ -34,7 +34,10 @@ export default ({ event }) => {
   const n = weekday[date.getDay()];
 
   return (
-    <div className="eventContainer" style={{ display: "flex" }}>
+    <div
+      className="eventContainer"
+      style={{ display: "flex", backgroundColor: "white" }}
+    >
       <Link
         to={`/event/${event.id}`}
         style={{
@@ -47,15 +50,15 @@ export default ({ event }) => {
           style={{
             border: "none",
             width: "100%",
-            display: "flex"
+            display: "flex",
+            backgroundColor: "white"
           }}
         >
           <img
             style={{
               flex: 1,
-              width: "3vw",
-              height: "auto",
-              backgroundColor: "white"
+              maxWidth: "3vw",
+              height: "auto"
             }}
             className="eventImage"
             src={event.src}
@@ -63,10 +66,9 @@ export default ({ event }) => {
           />
           <div
             style={{
-              flex: 8,
+              flex: 9,
               display: "flex",
-              justifyContent: "space-between",
-              backgroundColor: "white"
+              justifyContent: "space-between"
             }}
           >
             <div style={{ flex: 1 }} className="eventDate">
@@ -90,7 +92,10 @@ export default ({ event }) => {
         </button>
       </Link>
 
-      <button style={{ flex: 1 }} className="eventButton">
+      <button
+        style={{ flex: 1, backgroundColor: "white" }}
+        className="eventButton"
+      >
         M'inscrire
       </button>
     </div>

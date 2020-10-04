@@ -161,7 +161,6 @@ small {
   margin-right: 80px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
 }
 
 .eventContainer {
@@ -172,7 +171,6 @@ small {
   padding-top: 1vh;
   padding-bottom: 1vh;
   height: 8vh;
-  background-color: "white";
 }
 
 .eventImage {
@@ -219,7 +217,6 @@ small {
   color: #079992;
   font-size: 0.8em;
   border-color: #079992;
-  background-color: #ffffff;
   margin-left: 3vw;
 }
 
