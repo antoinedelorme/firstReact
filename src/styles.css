@@ -191,34 +191,37 @@ small {
   align-content: start;
   flex-direction: column;
   margin-left: 1.5vw;
+  text-align: left;
 }
 
 .eventMonthFormat {
-  font-size: 0.7em;
+  font-size: 1.4em;
   color: rgb(247, 11, 11);
 }
 
 .eventDateFormat {
-  font-size: 0.7em;
+  font-size: 1.4em;
   color: rgb(247, 11, 11);
 }
 .eventName {
   flex: 4;
-  font-size: 0.7em;
+  font-size: 1.4em;
   color: #079992;
+  text-align: left;
 }
 .eventDetails {
   flex: 4;
+  text-align: left;
 }
 
 .eventDetailsTitle {
-  font-size: 0.7em;
+  font-size: 1.4em;
   text-align: right;
   color: #718093;
 }
 
 .eventDetailsTime {
-  font-size: 0.7em;
+  font-size: 1.4em;
   text-align: right;
   color: #a4b0be;
 }

@@ -34,22 +34,31 @@ export default ({ event }) => {
 
   return (
     <div className="eventContainer">
-      <img className="eventImage" src={event.src} alt="" />
-      <div className="eventDate">
-        <div className="eventMonthFormat">{monthName[date.getMonth()]}</div>
-        <div className="eventDateFormat">{date.getDate()}</div>
-      </div>
-      <div className="eventName">
-        <div>{event.title1}</div>
-        <div></div>
-      </div>
-      <div className="eventDetails">
-        <div className="eventDetailsTitle">{event.title2}</div>
-        <div className="eventDetailsTime">
-          {formatted_string("00", date.getHours())}:
-          {formatted_string("00", date.getMinutes())}
+      <button
+        style={{
+          flex: 10,
+          display: "flex",
+          backgroundColor: "white",
+          border: "none"
+        }}
+        onClick={() => console.log(event.id)}
+      >
+        <img className="eventImage" src={event.src} alt="" />
+        <div className="eventDate">
+          <div className="eventMonthFormat">{monthName[date.getMonth()]}</div>
+          <div className="eventDateFormat">{date.getDate()}</div>
         </div>
-      </div>
+        <div className="eventName">{event.title1}</div>
+        <div></div>
+
+        <div>
+          <div className="eventDetailsTitle">{event.title2}</div>
+          <div className="eventDetailsTime">
+            {formatted_string("00", date.getHours())}:
+            {formatted_string("00", date.getMinutes())}
+          </div>
+        </div>
+      </button>
       <button className="eventButton">M'inscrire</button>
     </div>
   );
