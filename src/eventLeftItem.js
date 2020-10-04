@@ -4,6 +4,12 @@ export default ({ event }) => {
   const style = {
     backgroundColor: "white"
   };
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  };
 
   return (
     <div style={style}>
@@ -48,7 +54,7 @@ export default ({ event }) => {
             textAlign: "left"
           }}
         >
-          20 octobre 2002
+          {event.date.toLocaleDateString("fr-FR", options)}
         </div>
       </div>
       <div
