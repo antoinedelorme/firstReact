@@ -84,6 +84,15 @@ small {
   position: relative;
   height: 15vw;
   width: 15vw;
+  transition: height 0.1s;
+  transition: width 0.1s;
+}
+.imageContainer:hover {
+  position: relative;
+  transition: height 0.1s;
+  transition: width 0.1s;
+  height: 15.25vw;
+  width: 15.25vw;
 }
 
 .ContainerTitle {

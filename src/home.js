@@ -7,8 +7,8 @@ import "./styles.css";
 
 const buttonStyle = {
   fontSize: "0.5em",
-  color: "#ffffff",
-  backgroundColor: "#40407a"
+  marginTop: "10px",
+  marginBottom: "10px"
 };
 
 const Main = () => {
@@ -31,6 +31,7 @@ const Main = () => {
           size="large"
           color="primary"
           aria-label="large outlined primary button group"
+          variant="outlined"
         >
           <Button onClick={() => setFilter("")} style={buttonStyle}>
             Tout

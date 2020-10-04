@@ -78,7 +78,7 @@ export default ({ event }) => {
           <div style={{ flexGrow: 1 }}>
             <Button
               style={{ width: "100%" }}
-              variant="contained"
+              variant="outlined"
               color="primary"
             >
               Interessé
@@ -88,7 +88,7 @@ export default ({ event }) => {
           <div style={{ flexGrow: 1 }}>
             <Button
               style={{ width: "100%" }}
-              variant="contained"
+              variant="outlined"
               color="primary"
             >
               J'y vais
@@ -97,7 +97,7 @@ export default ({ event }) => {
         </div>
         <Button
           style={{ width: "100%", marginTop: "20px" }}
-          variant="contained"
+          variant="outlined"
           color="primary"
         >
           Inscription
