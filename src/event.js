@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { EventsContext } from "./context/eventsContext";
+import EventLeftItem from "./eventLeftItem";
 
 export default ({ match }) => {
   const [events, setEvents] = useContext(EventsContext);
   const eventId = match.params.id;
-  console.log(eventId);
   const event = events.find((x) => x.id === eventId);
   const mainContainerStyle = {
     display: "flex",
-    justifyContent: "evenly-spaced"
+    justifyContent: "evenly-spaced",
+    backgroundColor: "red"
   };
   const leftContainerStyle = {
-    backgroundColor: "#d1ccc0",
     flex: 2,
     height: "300px",
     marginTop: "3em",
@@ -19,7 +19,7 @@ export default ({ match }) => {
     marginRight: "2.5em"
   };
   const rightContainerStyle = {
-    backgroundColor: "#d1ccc0",
+    backgroundColor: "#dfe4ea",
     flex: 3,
     height: "300px",
     marginTop: "3em",
@@ -30,7 +30,7 @@ export default ({ match }) => {
   return (
     <div style={mainContainerStyle}>
       <div style={leftContainerStyle}>
-        <h1>TEST</h1>
+        <EventLeftItem event={event} />
       </div>
       <div style={rightContainerStyle}>
         <h1>{event.title1}</h1>

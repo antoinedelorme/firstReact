@@ -5,5 +5,5 @@ export default () => {
     backgroundColor: "#d1ccc0"
   };
 
-  return <div style={style}></div>;
+  return <div style={style}> DEFAULT</div>;
 };
