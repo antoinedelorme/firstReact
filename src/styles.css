@@ -78,12 +78,10 @@ small {
   justify-content: space-between;
   display: flex;
   height: 17vw;
-  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .imageContainer {
   position: relative;
-  background-color: rgb(97, 97, 97);
   height: 15vw;
   width: 15vw;
 }
@@ -93,7 +91,6 @@ small {
   margin-left: 300px;
   margin-right: 80px;
   padding: 10px 10px 10px 10px;
-  background-color: rgba(255, 255, 255, 0.85);
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -174,8 +171,6 @@ small {
   padding-right: 3vh;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  display: flex;
-  width: 100%;
   height: 8vh;
   background-color: "white";
 }
@@ -186,7 +181,6 @@ small {
 }
 
 .eventDate {
-  flex: 1;
   display: flex;
   align-content: start;
   flex-direction: column;
@@ -204,13 +198,8 @@ small {
   color: rgb(247, 11, 11);
 }
 .eventName {
-  flex: 4;
   font-size: 1.4em;
   color: #079992;
-  text-align: left;
-}
-.eventDetails {
-  flex: 4;
   text-align: left;
 }
 
@@ -227,7 +216,6 @@ small {
 }
 
 .eventButton {
-  flex: 2;
   color: #079992;
   font-size: 0.8em;
   border-color: #079992;

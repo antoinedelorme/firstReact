@@ -34,44 +34,65 @@ export default ({ event }) => {
   const n = weekday[date.getDay()];
 
   return (
-    <div className="eventContainer">
+    <div className="eventContainer" style={{ display: "flex" }}>
       <Link
         to={`/event/${event.id}`}
         style={{
-          flex: 10,
-          backgroundColor: "white",
+          flex: 4,
           border: "none",
           textDecoration: "none"
         }}
       >
         <button
           style={{
-            flex: 10,
-            display: "flex",
-            backgroundColor: "white",
             border: "none",
-            width: "100%"
+            width: "100%",
+            display: "flex"
           }}
         >
-          <img className="eventImage" src={event.src} alt="" />
-          <div className="eventDate">
-            <div className="eventMonthFormat">{monthName[date.getMonth()]}</div>
-            <div className="eventDateFormat">{date.getDate()}</div>
-          </div>
-          <div className="eventName">{event.title1}</div>
-          <div></div>
+          <img
+            style={{
+              flex: 1,
+              width: "3vw",
+              height: "auto",
+              backgroundColor: "white"
+            }}
+            className="eventImage"
+            src={event.src}
+            alt=""
+          />
+          <div
+            style={{
+              flex: 8,
+              display: "flex",
+              justifyContent: "space-between",
+              backgroundColor: "white"
+            }}
+          >
+            <div style={{ flex: 1 }} className="eventDate">
+              <div className="eventMonthFormat">
+                {monthName[date.getMonth()]}
+              </div>
+              <div className="eventDateFormat">{date.getDate()}</div>
+            </div>
+            <div style={{ flex: 3 }} className="eventName">
+              {event.title1}
+            </div>
 
-          <div>
-            <div className="eventDetailsTitle">{event.title2}</div>
-            <div className="eventDetailsTime">
-              {formatted_string("00", date.getHours())}:
-              {formatted_string("00", date.getMinutes())}
+            <div style={{ flex: 3 }} className="eventDetails">
+              <div className="eventDetailsTitle">{event.title2}</div>
+              <div className="eventDetailsTime">
+                {formatted_string("00", date.getHours())}:
+                {formatted_string("00", date.getMinutes())}
+              </div>
             </div>
           </div>
         </button>
       </Link>
 
-      <button className="eventButton">M'inscrire</button>
+      <button style={{ flex: 1 }} className="eventButton">
+        M'inscrire
+      </button>
     </div>
   );
 };
