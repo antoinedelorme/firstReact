@@ -3,6 +3,8 @@ import ImageComponent from "./components/image";
 import EventsContainer from "./components/eventsContainer";
 import { Button, ButtonGroup } from "@material-ui/core";
 import { EventsContext } from "./context/eventsContext";
+import { Link } from "react-router-dom";
+
 import "./styles.css";
 
 const buttonStyle = {
@@ -22,7 +24,16 @@ const Main = () => {
 
       <div className="imagesContainer">
         {events.slice(0, 4).map((event) => (
-          <ImageComponent key={event.id} event={event} />
+          <Link
+            to={`/event/${event.id}`}
+            style={{
+              flex: 4,
+              border: "none",
+              textDecoration: "none"
+            }}
+          >
+            <ImageComponent key={event.id} event={event} />
+          </Link>
         ))}
       </div>
 
