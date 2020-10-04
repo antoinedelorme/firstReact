@@ -66,22 +66,21 @@ export default ({ event }) => {
             width: "100%",
             justifyContent: "space-around",
             flexFlow: "row nowrap",
-            alignItems: "stretch",
-            backgroundColor: "yellow"
+            alignItems: "stretch"
           }}
         >
-          <div style={{ flexGrow: 1, backgroundColor: "blue" }}>
+          <div style={{ flexGrow: 1 }}>
             <Button
-              style={{ width: "100%" }}
+              style={{ width: "100%", marginRight: "10px" }}
               variant="contained"
               color="primary"
             >
               Interessé
             </Button>
           </div>
-          <div style={{ flexGrow: 1, backgroundColor: "red" }}>
+          <div style={{ flexGrow: 1 }}>
             <Button
-              style={{ width: "100%" }}
+              style={{ width: "100%", marginLeft: "10px" }}
               variant="contained"
               color="primary"
             >
