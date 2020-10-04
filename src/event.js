@@ -33,7 +33,7 @@ export default ({ match }) => {
         <EventLeftItem event={event} />
       </div>
       <div style={rightContainerStyle}>
-        <h1>{event.title1}</h1>
+        <h1>ESPACE DISPONIBLE</h1>
       </div>
     </div>
   );

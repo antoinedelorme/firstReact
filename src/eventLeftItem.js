@@ -71,16 +71,17 @@ export default ({ event }) => {
         >
           <div style={{ flexGrow: 1 }}>
             <Button
-              style={{ width: "100%", marginRight: "10px" }}
+              style={{ width: "100%" }}
               variant="contained"
               color="primary"
             >
               Interessé
             </Button>
           </div>
+          <div style={{ width: "15px" }}> </div>
           <div style={{ flexGrow: 1 }}>
             <Button
-              style={{ width: "100%", marginLeft: "10px" }}
+              style={{ width: "100%" }}
               variant="contained"
               color="primary"
             >
