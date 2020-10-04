@@ -9,7 +9,7 @@ export default ({ match }) => {
   const mainContainerStyle = {
     display: "flex",
     justifyContent: "evenly-spaced",
-    backgroundColor: "red"
+    backgroundColor: "#f1f2f6"
   };
   const leftContainerStyle = {
     flex: 2,
@@ -20,7 +20,7 @@ export default ({ match }) => {
   };
   const rightContainerStyle = {
     backgroundColor: "#dfe4ea",
-    flex: 3,
+    flex: 5,
     height: "300px",
     marginTop: "3em",
     marginRight: "5em",
