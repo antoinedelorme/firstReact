@@ -13,7 +13,7 @@ export default function App() {
         <Nav />
         <Switch>
           <Route path="/" exact component={Home}></Route>
-          <Route path="/event" component={Event}></Route>
+          <Route path="/event/:id" component={Event}></Route>
         </Switch>
       </EventsProvider>
     </Router>

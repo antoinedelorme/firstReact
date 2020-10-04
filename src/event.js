@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { EventsContext } from "./context/eventsContext";
 
-import { Link } from "react-router-dom";
-
-export default (data) => {
+export default ({ match }) => {
+  const [events, setEvents] = useContext(EventsContext);
+  const eventId = match.params.id;
+  console.log(eventId);
+  const event = events.find((x) => x.id === eventId);
   const mainContainerStyle = {
     display: "flex",
     justifyContent: "evenly-spaced"
@@ -30,8 +33,7 @@ export default (data) => {
         <h1>TEST</h1>
       </div>
       <div style={rightContainerStyle}>
-        {" "}
-        <h1>RIGHT</h1>
+        <h1>{event.title1}</h1>
       </div>
     </div>
   );

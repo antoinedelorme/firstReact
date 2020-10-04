@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default ({ event }) => {
   const { date } = event;
@@ -34,31 +35,42 @@ export default ({ event }) => {
 
   return (
     <div className="eventContainer">
-      <button
+      <Link
+        to={`/event/${event.id}`}
         style={{
           flex: 10,
-          display: "flex",
           backgroundColor: "white",
-          border: "none"
+          border: "none",
+          textDecoration: "none"
         }}
-        onClick={() => console.log(event.id)}
       >
-        <img className="eventImage" src={event.src} alt="" />
-        <div className="eventDate">
-          <div className="eventMonthFormat">{monthName[date.getMonth()]}</div>
-          <div className="eventDateFormat">{date.getDate()}</div>
-        </div>
-        <div className="eventName">{event.title1}</div>
-        <div></div>
-
-        <div>
-          <div className="eventDetailsTitle">{event.title2}</div>
-          <div className="eventDetailsTime">
-            {formatted_string("00", date.getHours())}:
-            {formatted_string("00", date.getMinutes())}
+        <button
+          style={{
+            flex: 10,
+            display: "flex",
+            backgroundColor: "white",
+            border: "none",
+            width: "100%"
+          }}
+        >
+          <img className="eventImage" src={event.src} alt="" />
+          <div className="eventDate">
+            <div className="eventMonthFormat">{monthName[date.getMonth()]}</div>
+            <div className="eventDateFormat">{date.getDate()}</div>
           </div>
-        </div>
-      </button>
+          <div className="eventName">{event.title1}</div>
+          <div></div>
+
+          <div>
+            <div className="eventDetailsTitle">{event.title2}</div>
+            <div className="eventDetailsTime">
+              {formatted_string("00", date.getHours())}:
+              {formatted_string("00", date.getMinutes())}
+            </div>
+          </div>
+        </button>
+      </Link>
+
       <button className="eventButton">M'inscrire</button>
     </div>
   );

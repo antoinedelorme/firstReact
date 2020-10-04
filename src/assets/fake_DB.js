@@ -10,7 +10,7 @@ const date8 = new Date(2020, 9, 10, 20, 0);
 
 const events = [
   {
-    id: 1,
+    id: "1",
     title1: "Van Gogh",
     title2: "musée d'Orsay",
     src: "/images/img1.png",
@@ -18,7 +18,7 @@ const events = [
     type: "art"
   },
   {
-    id: 2,
+    id: "2",
     title1: "Intelligence artificielle",
     title2: "mythes et réalités",
     src: "/images/img2.png",
@@ -26,7 +26,7 @@ const events = [
     type: "sciences"
   },
   {
-    id: 3,
+    id: "3",
     title1: "San Francisco",
     title2: "lieux insolites",
     src: "/images/img3.png",
@@ -34,7 +34,7 @@ const events = [
     type: "voyages"
   },
   {
-    id: 4,
+    id: "4",
     title1: "Hokusai",
     title2: "musée Guimet",
     src: "/images/img4.png",
@@ -42,7 +42,7 @@ const events = [
     type: "art"
   },
   {
-    id: 5,
+    id: "5",
     title1: "Le bal des philosophes",
     title2: "Bal Blomet",
     src: "/images/img5.png",
@@ -50,7 +50,7 @@ const events = [
     type: "musique"
   },
   {
-    id: 6,
+    id: "6",
     title1: "Rangiroa",
     title2: "voyage au bout du monde",
     src: "/images/img6.png",
@@ -58,7 +58,7 @@ const events = [
     type: "voyages"
   },
   {
-    id: 7,
+    id: "7",
     title1: "La feijoada",
     title2: "apprenez avec un chef",
     src: "/images/img7.png",
@@ -66,7 +66,7 @@ const events = [
     type: "cuisine"
   },
   {
-    id: 8,
+    id: "8",
     title1: "Gengis Khan",
     title2: "le loup bleu",
     src: "/images/img8.png",
@@ -74,7 +74,7 @@ const events = [
     type: "histoire"
   },
   {
-    id: 9,
+    id: "9",
     title1: "Loisirs",
     title2: "un potager en ville",
     src: "/images/img9.png",
@@ -82,7 +82,7 @@ const events = [
     date: date8
   },
   {
-    id: 10,
+    id: "10",
     title1: "Pierre Soulages",
     title2: "musée Pompidou",
     src: "/images/img10.png",
