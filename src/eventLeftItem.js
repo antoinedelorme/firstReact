@@ -70,8 +70,24 @@ export default ({ event }) => {
             backgroundColor: "yellow"
           }}
         >
-          <div style={{ flexGrow: 1, backgroundColor: "blue" }}>TEST</div>
-          <div style={{ flexGrow: 1, backgroundColor: "red" }}>TEST</div>
+          <div style={{ flexGrow: 1, backgroundColor: "blue" }}>
+            <Button
+              style={{ width: "100%" }}
+              variant="contained"
+              color="primary"
+            >
+              Interessé
+            </Button>
+          </div>
+          <div style={{ flexGrow: 1, backgroundColor: "red" }}>
+            <Button
+              style={{ width: "100%" }}
+              variant="contained"
+              color="primary"
+            >
+              J'y vais
+            </Button>
+          </div>
         </div>
         <Button
           style={{ margin: "20px", width: "100%" }}
