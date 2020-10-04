@@ -89,7 +89,7 @@ export default ({ event }) => {
           </div>
         </div>
         <Button
-          style={{ margin: "20px", width: "100%" }}
+          style={{ width: "100%", marginTop: "20px" }}
           variant="contained"
           color="primary"
         >
