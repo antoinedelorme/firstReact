@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import {
+  styleImageContainer,
+  styleImageFilter,
+  styleImageDateContainer
+} from "../styles/dynamicStyles";
+import { EventsContext } from "../context/eventsContext";
+import Radium from "radium";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
 
-export default ({ event }) => {
+const LocalComponent = ({ event }) => {
   const { date } = event;
   const weekday = new Array(7);
   weekday[0] = "DIM";
@@ -32,9 +41,13 @@ export default ({ event }) => {
 
   const n = weekday[date.getDay()];
 
+  const [events, setEvents] = useContext(EventsContext);
+  const { version } = events;
+
   return (
-    <div className="imageContainer">
+    <div style={styleImageContainer[version]}>
       <img width="100%" src={event.src} alt="" />
+
       <div className="imageContainerBottom"></div>
       <div className="imageContainerTitle1">{event.title1}</div>
       <div className="imageContainerTitle2">{event.title2}</div>
@@ -44,7 +57,7 @@ export default ({ event }) => {
           {formatted_string("00", date.getMinutes())}
         </div>
       </div>
-      <div className="imageDateContainer">
+      <div style={styleImageDateContainer[version]}>
         <div className="imageMonthFormat">{n}</div>
         <div className="imageDateFormat">{date.getDate()}</div>
         <div>{monthName[date.getMonth()]}</div>
@@ -52,3 +65,5 @@ export default ({ event }) => {
     </div>
   );
 };
+
+export default Radium(LocalComponent);

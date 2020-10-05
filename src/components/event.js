@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { EventsContext } from "./context/eventsContext";
+import { EventsContext } from "../context/eventsContext";
+import { styleImagesContainer } from "../styles/dynamicStyles";
 
 export default ({ event }) => {
   const { date } = event;
@@ -33,6 +34,9 @@ export default ({ event }) => {
   };
 
   const n = weekday[date.getDay()];
+
+  const [events, setEvents] = useContext(EventsContext);
+  const { version } = events;
 
   return (
     <div

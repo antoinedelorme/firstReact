@@ -4,7 +4,10 @@ import EventsContainer from "./components/eventsContainer";
 import { Button, ButtonGroup } from "@material-ui/core";
 import { EventsContext } from "./context/eventsContext";
 import { Link } from "react-router-dom";
-import { styleImagesContainer } from "./styles/dynamicStyles";
+import {
+  styleImagesContainer,
+  styleFiltersContainer
+} from "./styles/dynamicStyles";
 
 import "./styles.css";
 
@@ -16,6 +19,8 @@ const buttonStyle = {
 
 const Main = () => {
   const [events, setEvents] = useContext(EventsContext);
+
+  const { version } = events;
   const [filter, setFilter] = useState("");
   useEffect(() => {});
   return (
@@ -38,7 +43,7 @@ const Main = () => {
         ))}
       </div>
 
-      <div className="filtersContainer">
+      <div style={styleFiltersContainer[version]}>
         <ButtonGroup
           size="large"
           color="primary"

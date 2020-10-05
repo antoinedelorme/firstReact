@@ -3,10 +3,11 @@ import Home from "./home";
 import Nav from "./nav";
 import Event from "./event";
 import { EventsProvider } from "./context/eventsContext";
+import Radium from "radium";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-export default function App() {
+const App = () => {
   return (
     <Router>
       <EventsProvider>
@@ -18,4 +19,6 @@ export default function App() {
       </EventsProvider>
     </Router>
   );
-}
+};
+
+export default Radium(App);
