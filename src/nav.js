@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -7,6 +7,7 @@ import InputBase from "@material-ui/core/InputBase";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
+import { EventsContext } from "./context/eventsContext";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,6 +66,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchAppBar() {
   const classes = useStyles();
+  const [events, setEvents] = useContext(EventsContext);
 
   return (
     <div className={classes.root}>
@@ -76,7 +78,12 @@ export default function SearchAppBar() {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuIcon />
+            <MenuIcon
+              onClick={() => {
+                const { data, version } = events;
+                setEvents({ data: data, version: (version + 1) % 2 });
+              }}
+            />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             Project-UI

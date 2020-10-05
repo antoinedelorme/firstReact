@@ -4,6 +4,7 @@ import EventsContainer from "./components/eventsContainer";
 import { Button, ButtonGroup } from "@material-ui/core";
 import { EventsContext } from "./context/eventsContext";
 import { Link } from "react-router-dom";
+import { styleImagesContainer } from "./styles/dynamicStyles";
 
 import "./styles.css";
 
@@ -22,7 +23,7 @@ const Main = () => {
       {/* <SearchMovies /> */}
       <div className="ContainerTitle">Pour vous</div>
 
-      <div className="imagesContainer">
+      <div style={styleImagesContainer[events.version]}>
         {events.data.slice(0, 4).map((event) => (
           <Link
             to={`/event/${event.id}`}

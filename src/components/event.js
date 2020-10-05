@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { EventsContext } from "./context/eventsContext";
 
 export default ({ event }) => {
   const { date } = event;
