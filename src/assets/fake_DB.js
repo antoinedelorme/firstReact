@@ -7,8 +7,17 @@ const date5 = new Date(2020, 9, 7, 17, 0);
 const date6 = new Date(2020, 9, 8, 15, 0);
 const date7 = new Date(2020, 9, 9, 15, 0);
 const date8 = new Date(2020, 9, 10, 20, 0);
+const date9 = new Date(2020, 8, 1, 10, 0);
 
 const events = [
+  {
+    id: "11",
+    title1: "Masashi Kishimoto",
+    title2: "dessinez des mangas",
+    src: "/images/img11.png",
+    type: "art",
+    date: date9
+  },
   {
     id: "1",
     title1: "Van Gogh",

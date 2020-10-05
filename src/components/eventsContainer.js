@@ -7,7 +7,7 @@ export default ({ events, filter }) => {
   if (filter === "")
     return (
       <div className="eventsContainer">
-        {events
+        {events.data
           .slice()
           .sort((a, b) => a.date - b.date)
           .map((event) => (

@@ -5,7 +5,7 @@ import EventLeftItem from "./eventLeftItem";
 export default ({ match }) => {
   const [events, setEvents] = useContext(EventsContext);
   const eventId = match.params.id;
-  const event = events.find((x) => x.id === eventId);
+  const event = events.data.find((x) => x.id === eventId);
   const mainContainerStyle = {
     display: "flex",
     justifyContent: "evenly-spaced",

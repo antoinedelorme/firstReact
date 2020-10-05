@@ -23,7 +23,7 @@ const Main = () => {
       <div className="ContainerTitle">Pour vous</div>
 
       <div className="imagesContainer">
-        {events.slice(0, 4).map((event) => (
+        {events.data.slice(0, 4).map((event) => (
           <Link
             to={`/event/${event.id}`}
             style={{
